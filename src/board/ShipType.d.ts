@@ -1,0 +1,7 @@
+export enum ShipType {
+    SUB = "SUB",
+    SPEEDBOAT = "SPEEDBOAT",
+    BATTLESHIP = "BATTLESHIP",
+    AIRCRAFT_CARRIER = "AIRCRAFT_CARRIER",
+    OIL_RIG = "OIL_RIG",
+}

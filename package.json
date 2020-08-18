@@ -1,0 +1,57 @@
+{
+  "name": "battleships-server",
+  "version": "1.0.0",
+  "description": "Socialgorithm Battleships Game Engine",
+  "main": "index.js",
+  "scripts": {
+    "start": "node dist/index.js",
+    "start:dev": "nodemon",
+    "dev": "tsc && ts-node -r tsconfig-paths/register --files src/index.ts",
+    "start:opts": "tsc && ts-node bin/index.js",
+    "build:dev": "tsc -w",
+    "build": "tsc",
+    "test": "npm run lint && cross-env TS_NODE_FILES=true nyc mocha -r ts-node/register -r tsconfig-paths/register --recursive 'test/**/*.test.ts'",
+    "lint": "tslint -p tsconfig.json -t stylish 'src/**/*.ts'",
+    "lint:fix": "tslint -p tsconfig.json -t stylish --fix 'src/**/*.ts'",
+    "docs": "typedoc --out docs/ --mode modules ./src"
+  },
+  "keywords": [
+    "socialgorithm",
+    "battleships"
+  ],
+  "author": "Socialgorithm",
+  "license": "AGPL-3.0-or-later",
+  "engines": {
+    "node": ">= 8"
+  },
+  "bin": {
+    "uttt": "bin/index.js"
+  },
+  "dependencies": {
+    "@socialgorithm/game-server": "0.4.0",
+    "command-line-args": "^5.0.2",
+    "command-line-usage": "^5.0.5",
+    "debug": "^4.1.1",
+    "socket.io": "^2.2.0",
+    "typemoq": "^2.1.0"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.1.7",
+    "@types/command-line-args": "^5.0.0",
+    "@types/command-line-usage": "^5.0.1",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^11.10.5",
+    "@types/socket.io": "^2.1.2",
+    "@types/socket.io-client": "^1.4.29",
+    "chai": "^4.2.0",
+    "cross-env": "^5.2.0",
+    "mocha": "^6.0.2",
+    "nodemon": "^1.18.10",
+    "nyc": "^13.2.0",
+    "ts-node": "^8.1.0",
+    "tsconfig-paths": "^3.8.0",
+    "tslint": "^5.13.1",
+    "typedoc": "^0.14.2",
+    "typescript": "^3.3.3",
+  }
+}
