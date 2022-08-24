@@ -1,5 +1,7 @@
 # Battleships (Game Server)
 
+![Lifecycle Archived](https://badgen.net/badge/Lifecycle/Archived/grey)
+
 This is a game server that powers our yearly Intern Competition and other hackathons. 
 
 ## The Game 
